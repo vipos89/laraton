@@ -1,23 +1,16 @@
 import os
 config = {
-    'default': 'sqlite3',
+    'default': 'sqlite',
     'mysql': {
         'driver': 'mysql',
         'host': 'localhost',
-        'database': 'database',
-        'user': 'root',
-        'password': '',
+        'database': os.getenv('DB_NAME', 'laraton'),
+        'user': os.getenv('DB_NAME', 'root'),
+        'password': os.getenv('DB_NAME', 'root'),
         'prefix': ''
     },
-    "sqlite3": {
-        "dbname"
-    },
-    'postrgre': {
-        'driver': 'mysql',
-        'host': 'localhost',
-        'database': 'database',
-        'user': 'root',
-        'password': '',
-        'prefix': ''
+    "sqlite": {
+        'driver': 'sqlite',
+        "dbname": os.getenv('DB_NAME', 'test.db')
     }
 }
