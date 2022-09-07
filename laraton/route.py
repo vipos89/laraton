@@ -2,7 +2,12 @@ from dataclasses import dataclass
 from typing import Type
 
 
-@dataclass
 class Route:
-    url: str
-    controller: str
+
+    def __init__(self, pattern, controller, method, *args, **kwargs):
+        self.pattern = pattern
+        self.controller = controller
+        self.method = method
+
+    def name(self, name):
+        self.name = name
