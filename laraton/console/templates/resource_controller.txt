@@ -1,0 +1,23 @@
+from laraton.controller import Controller
+from laraton.view import view
+
+class {controller_name}(Controller):
+
+    def index(self):
+        pass
+
+    def create(self):
+        pass
+
+    def store(self):
+        pass
+
+    def edit(self, {pk}):
+        pass
+
+    def update(self, {pk}):
+        pass
+
+    def delete(self, {pk}):
+        pass
+
